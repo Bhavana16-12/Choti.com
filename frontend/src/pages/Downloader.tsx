@@ -46,7 +46,7 @@ export const Downloader = () => {
     setDownloadResult(null);
 
     try {
-      const apiUrl = import.meta.env.VITE_API_URL || '/api';
+      const apiUrl = 'https://choti-com.onrender.com/api';
       const response = await fetch(`${apiUrl}/download/analyze`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -81,7 +81,7 @@ export const Downloader = () => {
     setDownloadStarted(false);
     setError(null);
 
-    const apiUrl = import.meta.env.VITE_API_URL || '/api';
+    const apiUrl = 'https://choti-com.onrender.com/api';
     const params = new URLSearchParams({
       url,
       format: selectedFormat,

@@ -60,7 +60,7 @@ export const Converter = () => {
     formData.append('quality', quality);
 
     try {
-      const apiUrl = import.meta.env.VITE_API_URL || '/api';
+      const apiUrl = 'https://choti-com.onrender.com/api';
       const response = await fetch(`${apiUrl}/convert/mp4-to-mp3`, {
         method: 'POST',
         body: formData,
