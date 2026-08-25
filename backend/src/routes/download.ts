@@ -42,7 +42,7 @@ router.post('/analyze', async (req: Request, res: Response): Promise<void> => {
     const info = await youtubedl(url, {
       dumpJson: true,
       noWarnings: true,
-      noCheckCertificate: true,
+      noCheckCertificates: true,
       forceIpv4: true,
       noPlaylist: true,
     });
